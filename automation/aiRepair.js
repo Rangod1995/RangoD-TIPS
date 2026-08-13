@@ -8,6 +8,7 @@ import { planRepair } from "./repairPlanner.js";
 import { readFile } from "./fileManager.js";
 import { replaceFile } from "./replacementManager.js";
 import { runVerification } from "./testRunner.js";
+import { runLocalRepair } from "./localRepair.js";
 
 function extractJson(text) {
     const cleaned = String(text || "")
@@ -19,7 +20,9 @@ function extractJson(text) {
     const end = cleaned.lastIndexOf("}");
 
     if (start === -1 || end === -1) {
-        throw new Error("AI response did not contain valid JSON.");
+        throw new Error(
+            "AI response did not contain valid JSON."
+        );
     }
 
     return JSON.parse(
@@ -103,14 +106,16 @@ Rules:
     );
 
     if (!response.ok) {
-        const body = await response.text();
+        const body =
+            await response.text();
 
         throw new Error(
             `AI API failed (${response.status}): ${body}`
         );
     }
 
-    const data = await response.json();
+    const data =
+        await response.json();
 
     const content =
         data?.choices?.[0]?.message?.content;
@@ -135,9 +140,49 @@ async function repairFile(task, filePath) {
         readFile(filePath);
 
     logger.info(
+        "Preparing repair.",
+        {
+            filePath
+        }
+    );
+
+    /*
+     * =====================================================
+     * FREE LOCAL REPAIR MODE
+     * =====================================================
+     *
+     * If no AI API key exists, use the local
+     * deterministic repair engine.
+     *
+     * The local engine is deliberately conservative.
+     * It will NEVER invent replacement code.
+     */
+
+    if (!process.env.RANGOD_AI_API_KEY) {
+        logger.info(
+            "RANGOD_AI_API_KEY not configured. Using local repair engine.",
+            {
+                filePath
+            }
+        );
+
+        return await runLocalRepair(
+            task,
+            filePath,
+            currentContent
+        );
+    }
+
+    /*
+     * =====================================================
+     * AI REPAIR MODE
+     * =====================================================
+     */
+
+    logger.info(
         "Sending file to AI repair engine.",
         {
-            filePath,
+            filePath
         }
     );
 
@@ -152,7 +197,8 @@ async function repairFile(task, filePath) {
         return {
             success: true,
             modified: false,
-            reason: aiResult.reason,
+            reason:
+                aiResult.reason
         };
     }
 
@@ -172,7 +218,8 @@ async function repairFile(task, filePath) {
         return {
             success: true,
             modified: false,
-            reason: "No effective change generated.",
+            reason:
+                "No effective change generated."
         };
     }
 
@@ -194,7 +241,7 @@ async function repairFile(task, filePath) {
         logger.success(
             "AI repair passed verification.",
             {
-                filePath,
+                filePath
             }
         );
 
@@ -202,8 +249,10 @@ async function repairFile(task, filePath) {
             success: true,
             modified: true,
             filePath,
-            reason: aiResult.reason,
-            backup: replacement.backup,
+            reason:
+                aiResult.reason,
+            backup:
+                replacement.backup
         };
     } catch (verificationError) {
         logger.error(
@@ -211,7 +260,7 @@ async function repairFile(task, filePath) {
             {
                 filePath,
                 error:
-                    verificationError.message,
+                    verificationError.message
             }
         );
 
@@ -223,7 +272,7 @@ async function repairFile(task, filePath) {
         logger.success(
             "Automatic rollback completed.",
             {
-                filePath,
+                filePath
             }
         );
 
@@ -260,7 +309,8 @@ async function runAIRepair(
         "AI repair target selected.",
         {
             targetFile,
-            confidence: plan.confidence,
+            confidence:
+                plan.confidence
         }
     );
 
@@ -272,18 +322,18 @@ async function runAIRepair(
 
     return {
         ...result,
-        plan,
+        plan
     };
 }
 
 export {
     callAI,
     repairFile,
-    runAIRepair,
+    runAIRepair
 };
 
 export default {
     callAI,
     repairFile,
-    runAIRepair,
+    runAIRepair
 };

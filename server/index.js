@@ -393,3 +393,52 @@ process.on(
     );
   }
 );
+// ==========================================
+// Unhandled Promise Rejection
+// ==========================================
+
+process.on(
+  "unhandledRejection",
+  (reason) => {
+    console.error(
+      "=========================================="
+    );
+
+    console.error(
+      "RangoD Unhandled Promise Rejection"
+    );
+
+    console.error(reason);
+
+    console.error(
+      "=========================================="
+    );
+  }
+);
+
+// ==========================================
+// Uncaught Exception
+// ==========================================
+
+process.on(
+  "uncaughtException",
+  (error) => {
+    console.error(
+      "=========================================="
+    );
+
+    console.error(
+      "RangoD Uncaught Exception"
+    );
+
+    console.error(error);
+
+    console.error(
+      "=========================================="
+    );
+
+    gracefulShutdown(
+      "uncaughtException"
+    );
+  }
+);
