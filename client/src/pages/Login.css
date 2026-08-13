@@ -1,0 +1,20 @@
+/* ==========================================
+   FORGOT PASSWORD
+========================================== */
+
+.forgot-password-link {
+    text-align: right;
+    margin-top: -4px;
+    margin-bottom: 12px;
+}
+
+.forgot-password-link a {
+    color: #22c55e;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.forgot-password-link a:hover {
+    text-decoration: underline;
+}

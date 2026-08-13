@@ -1,0 +1,11 @@
+{
+  "name": "rangod-tips",
+  "private": true,
+  "scripts": {
+    "server": "npm --prefix server start",
+    "client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "verify": "node --check server/index.js && node --check agent/rangoD.js && npm --prefix client run build"
+  },
+  "type": "module"
+}

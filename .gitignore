@@ -1,0 +1,18 @@
+node_modules/
+client/node_modules/
+server/node_modules/
+client/dist/
+.env
+.env.*
+!.env.example
+server/.env
+client/.env
+repairs/backups/
+repairs/completed/
+repairs/failed/
+automation/backups/
+automation/logs/
+
+# Generated test/deployment artifacts
+server/*.log
+repairs/plans/*.json

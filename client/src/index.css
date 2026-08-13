@@ -1,0 +1,421 @@
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8%;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 750px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.primary-btn {
+  background: #38bdf8;
+  color: white;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+}
+
+.secondary-btn {
+  background: white;
+  color: #1e3a8a;
+}
+
+.secondary-btn:hover {
+  transform: translateY(-3px);
+}
+
+.categories {
+  padding: 80px 8%;
+  text-align: center;
+  background: #f8fafc;
+}
+
+.categories h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #0f172a;
+}
+
+.section-text {
+  max-width: 650px;
+  margin: 0 auto 50px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.category-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.category-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.category-card h3 {
+  margin-bottom: 15px;
+  color: #1e3a8a;
+}
+
+.category-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.category-card button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.category-card button:hover {
+  background: #1d4ed8;
+}
+
+.predictions {
+  padding: 80px 8%;
+  background: #f5f7fa;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #121212;
+}
+
+.section-header p {
+  max-width: 700px;
+  margin: 15px auto;
+  color: #555;
+  line-height: 1.7;
+}
+
+.prediction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.prediction-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  transition: .3s;
+}
+
+.prediction-card:hover {
+  transform: translateY(-8px);
+}
+
+.league {
+  display: inline-block;
+  background: #00C853;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: .9rem;
+  margin-bottom: 15px;
+}
+
+.pick {
+  color: #00C853;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 20px 0;
+}
+
+.prediction-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  color: #666;
+}
+
+.prediction-card button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #121212;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.prediction-card button:hover {
+  background: #00C853;
+}
+
+.analysis {
+  padding: 90px 8%;
+  background: #ffffff;
+}
+
+.analysis-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.analysis-card {
+  padding: 30px;
+  border-radius: 15px;
+  background: #f8fafc;
+  text-align: center;
+  transition: 0.3s;
+  border: 1px solid #e5e7eb;
+}
+
+.analysis-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.analysis-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.analysis-card h3 {
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+.analysis-card p {
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.analysis {
+  padding: 90px 8%;
+  background: #ffffff;
+}
+
+.analysis-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.analysis-card {
+  padding: 30px;
+  border-radius: 15px;
+  background: #f8fafc;
+  text-align: center;
+  transition: 0.3s;
+  border: 1px solid #e5e7eb;
+}
+
+.analysis-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.analysis-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.analysis-card h3 {
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+.analysis-card p {
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.live-section {
+  padding: 80px 8%;
+  background: #0f172a;
+  color: white;
+}
+
+.live-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.live-card {
+  background: #1e293b;
+  border-radius: 15px;
+  padding: 25px;
+  transition: .3s;
+}
+
+.live-card:hover {
+  transform: translateY(-6px);
+}
+
+.league-name {
+  display: inline-block;
+  background: #16a34a;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  font-size: .9rem;
+}
+
+.score-board {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0;
+  font-size: 1.1rem;
+}
+
+.score {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.match-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.live-badge {
+  background: red;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: .8rem;
+  font-weight: bold;
+}
+
+.details-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #22c55e;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.details-btn:hover {
+  background: #16a34a;
+}
+
+/* ===========================
+   Popular Competitions
+=========================== */
+
+.competitions {
+  padding: 80px 8%;
+  background: #f8fafc;
+}
+
+.competition-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  margin-top: 45px;
+}
+
+.competition-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+  transition: all .3s ease;
+}
+
+.competition-card:hover {
+  transform: translateY(-8px);
+}
+
+.competition-logo {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.competition-card h3 {
+  margin-bottom: 10px;
+}
+
+.competition-card p {
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.competition-card button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #16a34a;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.competition-card button:hover {
+  background: #15803d;
+}

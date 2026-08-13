@@ -1,0 +1,137 @@
+.account-page{
+    background:#f4f6fb;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:50px 20px;
+}
+
+.account-card{
+    width:100%;
+    max-width:750px;
+    background:#fff;
+    border-radius:16px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.account-card h1{
+    color:#0b3d91;
+    margin-bottom:30px;
+}
+
+.account-section{
+    margin-bottom:35px;
+}
+
+.account-section h2{
+    color:#0b3d91;
+    margin-bottom:18px;
+    border-bottom:2px solid #eee;
+    padding-bottom:10px;
+}
+
+.info-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 0;
+    border-bottom:1px solid #f0f0f0;
+}
+
+.info-row span{
+    color:#666;
+}
+
+.status{
+    padding:6px 12px;
+    border-radius:20px;
+    color:#fff;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.active{
+    background:#16a34a;
+}
+
+.expired{
+    background:#dc2626;
+}
+
+.renew-btn,
+.logout-btn{
+    width:100%;
+    border:none;
+    border-radius:10px;
+    padding:14px;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:20px;
+    transition:.3s;
+}
+
+.renew-btn{
+    background:#2563eb;
+    color:#fff;
+}
+
+.renew-btn:hover{
+    background:#1d4ed8;
+}
+
+.logout-btn{
+    background:#dc2626;
+    color:#fff;
+}
+
+.logout-btn:hover{
+    background:#b91c1c;
+}
+
+@media(max-width:768px){
+
+.account-card{
+    padding:20px;
+}
+
+.info-row{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:5px;
+}
+
+}
+
+.payment-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+.payment-table th,
+.payment-table td{
+    padding:12px;
+    border-bottom:1px solid #e5e7eb;
+    text-align:left;
+}
+
+.payment-table th{
+    background:#f8fafc;
+    color:#0b3d91;
+    font-weight:600;
+}
+
+.payment-table tr:hover{
+    background:#f9fafb;
+}
+
+@media(max-width:768px){
+
+.payment-table{
+    display:block;
+    overflow-x:auto;
+}
+
+}

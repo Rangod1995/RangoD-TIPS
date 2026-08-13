@@ -1,0 +1,360 @@
+/* ==========================================
+RangoD TIPS V7
+Professional Home Page
+========================================== */
+
+.rangod-home {
+position: relative;
+width: 100%;
+overflow: hidden;
+background:
+radial-gradient(
+circle at 15% 10%,
+rgba(37, 99, 235, 0.12),
+transparent 30%
+),
+radial-gradient(
+circle at 85% 30%,
+rgba(16, 185, 129, 0.08),
+transparent 28%
+),
+#f8fafc;
+color: #0f172a;
+}
+
+/* ==========================================
+GLOBAL SECTION BEHAVIOR
+========================================== */
+
+.rangod-home section {
+position: relative;
+z-index: 1;
+}
+
+.rangod-home > section:not(.home-hero-section) {
+border-top: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+/* ==========================================
+HERO
+========================================== */
+
+.home-hero-section {
+position: relative;
+min-height: 680px;
+display: flex;
+align-items: center;
+background:
+linear-gradient(
+135deg,
+#eff6ff 0%,
+#ffffff 45%,
+#f0fdf4 100%
+);
+overflow: hidden;
+}
+
+.home-hero-section::before {
+content: "";
+position: absolute;
+width: 520px;
+height: 520px;
+top: -220px;
+left: -180px;
+border-radius: 50%;
+background: rgba(59, 130, 246, 0.13);
+filter: blur(10px);
+pointer-events: none;
+}
+
+.home-hero-section::after {
+content: "";
+position: absolute;
+width: 480px;
+height: 480px;
+right: -180px;
+bottom: -220px;
+border-radius: 50%;
+background: rgba(16, 185, 129, 0.10);
+filter: blur(10px);
+pointer-events: none;
+}
+
+/* ==========================================
+LIVE SECTION
+========================================== */
+
+.home-live-section {
+background:
+linear-gradient(
+180deg,
+#ffffff 0%,
+#f8fafc 100%
+);
+padding: 10px 0;
+}
+
+/* ==========================================
+PREDICTIONS SECTION
+========================================== */
+
+.home-predictions-section {
+background:
+linear-gradient(
+135deg,
+#f8fbff 0%,
+#eef5ff 50%,
+#ffffff 100%
+);
+padding: 20px 0;
+overflow: hidden;
+}
+
+/* ==========================================
+COMPETITIONS
+========================================== */
+
+.home-competitions-section {
+background:
+linear-gradient(
+180deg,
+#ffffff 0%,
+#f8fafc 100%
+);
+padding: 20px 0;
+overflow: hidden;
+}
+
+/* ==========================================
+FEATURES
+========================================== */
+
+.home-features-section {
+background:
+linear-gradient(
+135deg,
+#0f172a 0%,
+#172554 48%,
+#0f172a 100%
+);
+color: #ffffff;
+padding: 20px 0;
+}
+
+/* ==========================================
+PRICING
+========================================== */
+
+.home-pricing-section {
+background:
+linear-gradient(
+135deg,
+#f8fafc 0%,
+#eff6ff 50%,
+#ecfdf5 100%
+);
+padding: 20px 0;
+overflow: hidden;
+}
+
+/* ==========================================
+DECORATIVE GLOWS
+========================================== */
+
+.home-section-glow {
+position: absolute;
+width: 420px;
+height: 420px;
+border-radius: 50%;
+filter: blur(90px);
+pointer-events: none;
+opacity: 0.35;
+}
+
+.glow-blue {
+top: -180px;
+right: -120px;
+background: rgba(59, 130, 246, 0.18);
+}
+
+.glow-purple {
+bottom: -180px;
+left: -140px;
+background: rgba(139, 92, 246, 0.13);
+}
+
+.glow-green {
+top: -160px;
+right: -100px;
+background: rgba(16, 185, 129, 0.14);
+}
+
+/* ==========================================
+SECTION TRANSITIONS
+========================================== */
+
+.home-live-section::after,
+.home-predictions-section::after,
+.home-competitions-section::after,
+.home-features-section::after,
+.home-pricing-section::after {
+content: "";
+position: absolute;
+left: 50%;
+bottom: 0;
+width: min(90%, 1100px);
+height: 1px;
+transform: translateX(-50%);
+background: linear-gradient(
+90deg,
+transparent,
+rgba(59, 130, 246, 0.15),
+transparent
+);
+}
+
+/* ==========================================
+COMMON CONTENT IMPROVEMENTS
+========================================== */
+
+.rangod-home .container {
+width: min(1180px, calc(100% - 40px));
+margin: 0 auto;
+}
+
+.rangod-home h1,
+.rangod-home h2,
+.rangod-home h3,
+.rangod-home h4 {
+letter-spacing: -0.02em;
+}
+
+.rangod-home button,
+.rangod-home a {
+-webkit-tap-highlight-color: transparent;
+}
+
+/* ==========================================
+SCROLL REVEAL SUPPORT
+========================================== */
+
+.home-predictions-section,
+.home-competitions-section,
+.home-features-section,
+.home-pricing-section {
+isolation: isolate;
+}
+
+/* ==========================================
+TABLET
+========================================== */
+
+@media (max-width: 1024px) {
+
+
+.home-hero-section {
+    min-height: 620px;
+}
+
+.rangod-home .container {
+    width: min(940px, calc(100% - 36px));
+}
+
+.home-section-glow {
+    width: 340px;
+    height: 340px;
+    filter: blur(75px);
+}
+
+
+}
+
+/* ==========================================
+MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+
+.home-hero-section {
+    min-height: auto;
+}
+
+.home-live-section,
+.home-predictions-section,
+.home-competitions-section,
+.home-features-section,
+.home-pricing-section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.rangod-home .container {
+    width: min(100% - 28px, 680px);
+}
+
+.home-section-glow {
+    width: 260px;
+    height: 260px;
+    filter: blur(65px);
+    opacity: 0.25;
+}
+
+.home-hero-section::before {
+    width: 320px;
+    height: 320px;
+}
+
+.home-hero-section::after {
+    width: 300px;
+    height: 300px;
+}
+
+
+}
+
+/* ==========================================
+SMALL PHONES
+========================================== */
+
+@media (max-width: 480px) {
+
+
+.rangod-home {
+    overflow-x: hidden;
+}
+
+.rangod-home .container {
+    width: calc(100% - 24px);
+}
+
+.home-live-section,
+.home-predictions-section,
+.home-competitions-section,
+.home-features-section,
+.home-pricing-section {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+
+}
+
+/* ==========================================
+ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+
+.rangod-home *,
+.rangod-home *::before,
+.rangod-home *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+}
+
+
+}

@@ -1,0 +1,474 @@
+/* ==========================================
+   client/src/components/PredictionDetails.css
+   RangoD TIPS V7 Enterprise
+   ========================================== */
+
+.prediction-details {
+    min-height: 100vh;
+    padding: 110px 20px 70px;
+}
+
+.details-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.details-card {
+    width: 100%;
+    background: #111827;
+    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.details-header {
+    padding: 42px 30px 35px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.league-badge {
+    display: inline-block;
+    padding: 7px 14px;
+    margin-bottom: 18px;
+    border-radius: 999px;
+    background: rgba(59, 130, 246, 0.12);
+    color: #60a5fa;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.details-header h1 {
+    margin: 0;
+    color: #f8fafc;
+    font-size: clamp(25px, 4vw, 38px);
+    line-height: 1.25;
+}
+
+.details-header h1 span {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.details-header p {
+    margin: 12px 0 0;
+    color: #94a3b8;
+    font-size: 15px;
+}
+
+/* ==========================================
+   CONTENT
+   ========================================== */
+
+.prediction-content {
+    padding: 35px;
+}
+
+.main-prediction {
+    text-align: center;
+    padding: 25px 20px 35px;
+}
+
+.prediction-label {
+    display: block;
+    margin-bottom: 12px;
+    color: #60a5fa;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.main-prediction h2 {
+    margin: 0;
+    color: #f8fafc;
+    font-size: clamp(28px, 5vw, 44px);
+    line-height: 1.15;
+}
+
+.pick-explanation {
+    max-width: 700px;
+    margin: 18px auto 0;
+    color: #94a3b8;
+    line-height: 1.7;
+}
+
+.pick-explanation strong {
+    color: #f8fafc;
+}
+
+/* ==========================================
+   CONFIDENCE
+   ========================================== */
+
+.confidence-section {
+    max-width: 620px;
+    margin: 30px auto 0;
+    text-align: left;
+}
+
+.confidence-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 9px;
+    color: #cbd5e1;
+}
+
+.confidence-header strong {
+    color: #f8fafc;
+    font-size: 20px;
+}
+
+.confidence-bar {
+    width: 100%;
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.confidence-fill {
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(
+        90deg,
+        #f59e0b,
+        #22c55e
+    );
+    transition: width 0.6s ease;
+}
+
+.confidence-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 9px;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* ==========================================
+   DETAILS GRID
+   ========================================== */
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 30px;
+}
+
+.info-box {
+    min-height: 105px;
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 15px;
+}
+
+.info-box span {
+    display: block;
+    margin-bottom: 9px;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.info-box strong {
+    display: block;
+    color: #f8fafc;
+    font-size: 17px;
+    line-height: 1.35;
+}
+
+.info-box small {
+    display: block;
+    margin-top: 7px;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* ==========================================
+   ANALYSIS
+   ========================================== */
+
+.analysis-box {
+    padding: 28px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 18px;
+}
+
+.analysis-heading span,
+.confidence-explanation > span {
+    display: block;
+    margin-bottom: 8px;
+    color: #60a5fa;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.analysis-heading h3,
+.confidence-explanation h3 {
+    margin: 0;
+    color: #f8fafc;
+    font-size: 22px;
+}
+
+.analysis-box ul {
+    margin: 22px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.analysis-box li {
+    position: relative;
+    padding: 12px 0 12px 27px;
+    color: #cbd5e1;
+    line-height: 1.65;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.analysis-box li:last-child {
+    border-bottom: 0;
+}
+
+.analysis-box li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    color: #22c55e;
+    font-weight: 800;
+}
+
+/* ==========================================
+   CONFIDENCE EXPLANATION
+   ========================================== */
+
+.confidence-explanation {
+    margin-top: 24px;
+    padding: 25px 28px;
+    background: rgba(59, 130, 246, 0.06);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: 18px;
+}
+
+.confidence-explanation p {
+    margin: 15px 0 0;
+    color: #94a3b8;
+    line-height: 1.7;
+}
+
+/* ==========================================
+   DISCLAIMER
+   ========================================== */
+
+.prediction-disclaimer {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 14px;
+    background: rgba(245, 158, 11, 0.06);
+    border: 1px solid rgba(245, 158, 11, 0.15);
+    color: #94a3b8;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.prediction-disclaimer strong {
+    color: #f59e0b;
+}
+
+/* ==========================================
+   PREMIUM
+   ========================================== */
+
+.premium-indicator {
+    margin-top: 22px;
+    padding: 14px;
+    text-align: center;
+    border-radius: 12px;
+    background: rgba(245, 158, 11, 0.08);
+    color: #fbbf24;
+    font-weight: 800;
+}
+
+/* ==========================================
+   LOCKED
+   ========================================== */
+
+.locked-overlay {
+    padding: 65px 30px;
+    text-align: center;
+}
+
+.lock-icon-large {
+    margin-bottom: 15px;
+    font-size: 62px;
+}
+
+.locked-overlay h2 {
+    margin: 0 0 12px;
+    color: #f8fafc;
+    font-size: 30px;
+}
+
+.locked-overlay p {
+    max-width: 600px;
+    margin: 0 auto 28px;
+    color: #94a3b8;
+    line-height: 1.7;
+}
+
+.upgrade-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 12px;
+    background: linear-gradient(
+        135deg,
+        #f59e0b,
+        #d97706
+    );
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.upgrade-btn:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 10px 25px rgba(245, 158, 11, 0.3);
+}
+
+/* ==========================================
+   LOADING
+   ========================================== */
+
+.loading-card {
+    padding: 70px 30px;
+    text-align: center;
+}
+
+.loading-spinner {
+    width: 42px;
+    height: 42px;
+    margin: 0 auto 20px;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-top-color: #60a5fa;
+    border-radius: 50%;
+    animation: rangod-spin 0.8s linear infinite;
+}
+
+.loading-card h2 {
+    margin: 0 0 10px;
+    color: #f8fafc;
+}
+
+.loading-card p {
+    margin: 0;
+    color: #94a3b8;
+}
+
+/* ==========================================
+   ERROR
+   ========================================== */
+
+.error-card {
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.error-icon {
+    margin-bottom: 15px;
+    font-size: 48px;
+}
+
+.error-card h2 {
+    margin: 0 0 12px;
+    color: #f8fafc;
+}
+
+.error-card p {
+    margin-bottom: 25px;
+    color: #94a3b8;
+}
+
+/* ==========================================
+   ANIMATION
+   ========================================== */
+
+@keyframes rangod-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 800px) {
+    .details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .prediction-content {
+        padding: 25px 20px;
+    }
+
+    .details-header {
+        padding: 32px 20px;
+    }
+}
+
+@media (max-width: 520px) {
+    .prediction-details {
+        padding: 90px 12px 50px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .details-header h1 {
+        font-size: 25px;
+    }
+
+    .main-prediction h2 {
+        font-size: 32px;
+    }
+
+    .analysis-box,
+    .confidence-explanation {
+        padding: 20px;
+    }
+
+    .confidence-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .prediction-disclaimer {
+        flex-direction: column;
+    }
+}

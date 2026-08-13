@@ -1,0 +1,101 @@
+.prediction-table-wrapper {
+  overflow-x: auto;
+}
+
+.prediction-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.prediction-table th {
+  background: #1e293b;
+  color: white;
+  padding: 14px;
+  text-align: left;
+}
+
+.prediction-table td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.prediction-table tr:hover {
+  background: #f8fafc;
+}
+
+.confidence-badge {
+  background: #2563eb;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.premium {
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.premium.yes {
+  background: #fde68a;
+}
+
+.premium.no {
+  background: #dcfce7;
+}
+
+.status {
+  padding: 6px 10px;
+  border-radius: 20px;
+  text-transform: capitalize;
+}
+
+.status.pending {
+  background: #fef3c7;
+}
+
+.status.won {
+  background: #bbf7d0;
+}
+
+.status.lost {
+  background: #fecaca;
+}
+
+.status.void {
+  background: #dbeafe;
+}
+
+.edit-btn {
+  margin-right: 8px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background: #1d4ed8;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+.prediction-table-loading,
+.prediction-table-empty {
+  padding: 40px;
+  text-align: center;
+}

@@ -1,0 +1,537 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+
+:root {
+
+  --primary: #00C853;
+  --primary-dark: #00A844;
+
+  --bg: #0B1220;
+  --surface: #111827;
+  --card: #1F2937;
+
+  --text: #F8FAFC;
+  --text-secondary: #94A3B8;
+
+  --danger: #EF4444;
+  --warning: #F59E0B;
+
+  --shadow:
+    0 8px 25px rgba(0,0,0,.25);
+
+  --radius: 16px;
+
+}
+
+
+
+/* GLOBAL RESET */
+
+* {
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+}
+
+
+
+html {
+
+  scroll-behavior: smooth;
+
+  width:100%;
+
+}
+
+
+
+body {
+
+  width:100%;
+
+  min-height:100vh;
+
+  overflow-x:hidden;
+
+  font-family:"Inter", sans-serif;
+
+  background:var(--bg);
+
+  color:var(--text);
+
+}
+
+
+
+#root {
+
+  width:100%;
+
+  min-height:100vh;
+
+}
+
+
+
+a {
+
+  text-decoration:none;
+
+  color:inherit;
+
+}
+
+
+
+button,
+input,
+textarea,
+select {
+
+  font-family:inherit;
+
+}
+
+
+
+button {
+
+  cursor:pointer;
+
+  border:none;
+
+}
+
+
+
+img {
+
+  max-width:100%;
+
+  display:block;
+
+}
+
+
+
+/* CONTAINER */
+
+.container {
+
+  width:min(92%, 1300px);
+
+  margin:auto;
+
+}
+
+
+
+/* SECTIONS */
+
+section {
+
+  padding:
+
+  clamp(40px,7vw,70px) 0;
+
+}
+
+
+
+.section-title {
+
+  font-size:
+
+  clamp(1.6rem,4vw,2rem);
+
+  font-weight:700;
+
+  margin-bottom:10px;
+
+}
+
+
+
+.section-subtitle {
+
+  color:var(--text-secondary);
+
+  margin-bottom:40px;
+
+}
+
+
+
+
+
+/* CARDS */
+
+.card {
+
+  background:var(--card);
+
+  border-radius:var(--radius);
+
+  box-shadow:var(--shadow);
+
+  padding:
+
+  clamp(15px,3vw,25px);
+
+  transition:.3s ease;
+
+}
+
+
+
+.card:hover {
+
+  transform:translateY(-5px);
+
+}
+
+
+
+
+
+/* BUTTONS */
+
+.primary-btn {
+
+  display:inline-flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+
+  background:var(--primary);
+
+  color:white;
+
+  padding:
+
+  14px clamp(20px,5vw,30px);
+
+
+  border-radius:10px;
+
+  font-size:16px;
+
+  font-weight:600;
+
+  transition:.3s;
+
+}
+
+
+
+.primary-btn:hover {
+
+  background:var(--primary-dark);
+
+}
+
+
+
+
+
+/* HERO */
+
+.hero {
+
+  min-height:80vh;
+
+  display:flex;
+
+  align-items:center;
+
+}
+
+
+
+.hero h1 {
+
+  font-size:
+
+  clamp(2.2rem,6vw,4rem);
+
+  color:var(--primary);
+
+  margin-bottom:15px;
+
+}
+
+
+
+.hero h2 {
+
+  font-size:
+
+  clamp(1.3rem,3vw,2rem);
+
+  margin-bottom:20px;
+
+}
+
+
+
+.hero p {
+
+  max-width:650px;
+
+  color:var(--text-secondary);
+
+  line-height:1.8;
+
+  margin-bottom:30px;
+
+  font-size:
+
+  clamp(15px,2vw,18px);
+
+}
+
+
+
+
+
+/* NAVBAR */
+
+.navbar {
+
+  position:sticky;
+
+  top:0;
+
+  z-index:1000;
+
+  background:
+
+  rgba(11,18,32,.95);
+
+  backdrop-filter:blur(10px);
+
+  border-bottom:
+
+  1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.navbar-container {
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  height:75px;
+
+}
+
+
+
+.logo {
+
+  font-size:
+
+  clamp(1.1rem,3vw,1.4rem);
+
+  font-weight:800;
+
+  color:var(--primary);
+
+}
+
+
+
+.logo span {
+
+  color:white;
+
+  margin-left:8px;
+
+}
+
+
+
+.nav-links {
+
+  display:flex;
+
+  list-style:none;
+
+  gap:
+
+  clamp(15px,3vw,30px);
+
+}
+
+
+
+.nav-links a {
+
+  color:var(--text);
+
+  transition:.3s;
+
+}
+
+
+
+.nav-links a:hover {
+
+  color:var(--primary);
+
+}
+
+
+
+
+
+/* AUTH PAGES SUPPORT */
+
+.auth-page {
+
+  min-height:100vh;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  padding:20px;
+
+}
+
+
+
+.auth-container {
+
+  width:100%;
+
+  max-width:450px;
+
+}
+
+
+
+
+
+/* TABLET */
+
+@media(max-width:768px){
+
+
+  .navbar-container {
+
+    height:65px;
+
+  }
+
+
+  .nav-links {
+
+    gap:15px;
+
+  }
+
+
+  .hero {
+
+    min-height:70vh;
+
+    text-align:center;
+
+  }
+
+
+  .hero p {
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+  }
+
+
+}
+
+
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+
+  .container {
+
+    width:94%;
+
+  }
+
+
+  .nav-links {
+
+    display:none;
+
+  }
+
+
+  .hero {
+
+    padding-top:40px;
+
+  }
+
+
+  .primary-btn {
+
+    width:100%;
+
+  }
+
+
+  .card:hover {
+
+    transform:none;
+
+  }
+
+
+}
+
+
+
+
+
+/* SMALL PHONES */
+
+@media(max-width:380px){
+
+
+  .hero h1 {
+
+    font-size:2rem;
+
+  }
+
+
+  .section-title {
+
+    font-size:1.4rem;
+
+  }
+
+
+}
