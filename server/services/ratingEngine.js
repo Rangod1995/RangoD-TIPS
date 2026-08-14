@@ -3,7 +3,7 @@ import {
   normalize,
   inverseNormalize,
   safeNumber,
-} from "../utils/normalization.js";
+} from "../normalization.js";
 
 function calculateStandingRating(rank) {
   return (

@@ -2,7 +2,7 @@ import express from "express";
 import {
   getMatches,
   getLiveMatches,
-} from "../controllers/matchController.js";
+} from "../controllers/matchcontroller.js";
 
 const router = express.Router();
 
