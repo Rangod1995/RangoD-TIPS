@@ -6,7 +6,7 @@
 
 import jwt from "jsonwebtoken";
 import { config } from "../config/env.js";
-import User from "../models/User.js";
+import User from "../models/user.js";
 
 // ==========================================
 // Get User ID From JWT

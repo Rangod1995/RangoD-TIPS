@@ -5,7 +5,7 @@
 // ==========================================
 
 import Prediction from "../models/Prediction.js";
-import User from "../models/User.js";
+import User from "../models/user.js";
 
 import {
     recalculatePremiumPredictions
